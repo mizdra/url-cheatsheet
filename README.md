@@ -99,6 +99,7 @@ console.log(url.toString()); // "https://example.com/?a=1&d=4"
 ## Validation
 
 Verify if `TypeError` is thrown when calling [`new URL(url)`](https://developer.mozilla.org/docs/Web/API/URL/URL).
+もう追加されてた。
 
 ```js
 function isValidURL(str) {
