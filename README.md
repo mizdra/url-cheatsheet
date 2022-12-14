@@ -95,3 +95,22 @@ url.search = new URLSearchParams(Array.from(url.searchParams).filter(([key, valu
 }));
 console.log(url.toString()); // "https://example.com/?a=1&d=4"
 ```
+
+## Validation
+
+Verify if `TypeError` is thrown when calling [`new URL(url)`](https://developer.mozilla.org/docs/Web/API/URL/URL).
+
+```js
+function isValidURL(str) {
+  try {
+    new URL(str);
+    return true;
+  } catch (e) {
+    if (e instanceof TypeError) return false;
+    throw e;
+  }
+}
+
+console.log(isValidURL("https://example.com/")); // true
+console.log(isValidURL("invalid string")); // false
+```
